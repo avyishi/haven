@@ -1,2 +1,22 @@
-<h1>Welcome to The Haven</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br/>
+<div class="container">
+<div class="jumbotron">
+  <h1>The Haven</h1>
+  <p>The Haven is a place to view what's showing in theaters and on network TV!</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-default' %> or 
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-info' %> today!
+  </p>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Theaters</h2>
+    <p>What's playing in Theaters</p>
+  </div>
+  <div class="col-md-4">
+    <h2>TV</h2>
+    <p>What's playing on TV</p>
+  </div>
+</div>
