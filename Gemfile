@@ -31,3 +31,5 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'figaro', '1.0'
+
+gem 'omniauth-facebook'
