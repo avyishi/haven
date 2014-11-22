@@ -35,3 +35,5 @@ gem 'figaro', '1.0'
 gem 'omniauth-facebook'
 
  gem 'pundit'
+
+gem 'bh', '~> 1.2'

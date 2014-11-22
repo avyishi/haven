@@ -7,27 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <div class="container-fluid">
-  <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs">
+    <%= nav layout: :justified do %>
+    <%= link_to 'Home', root_path %>
+    <%= link_to "About", about_path %>
+    <%= link_to "Movies", movies_path %>
+    <%= link_to "TV Shows", shows_path %>
+    <% end %>  
 
-        <li><%= link_to "Haven", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Movies", movies_path %></li>
-        <li><%= link_to "TV Shows", shows_path %></li>
-      
-      <div class="pull-right user-info">
-           <% if current_user %>
-             Hey <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-             <div><%= image_tag current_user.image %></div> 
-           <% else %>
-             <%= link_to "Sign In", new_user_session_path %> or 
-             <%= link_to "Sign Up", new_user_registration_path %>
-           <% end %>
-         </div>
-       
-
-   </ul>
+    <div class="pull-right user-info">
+      <% if current_user %>
+      Hey! <%= link_to (current_user.name || current_user.email),edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <div><%= image_tag current_user.image %></div> 
+      <% else %>
+      <%= link_to "Sign In", new_user_session_path %> or 
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+        </div>
+    </ul>
 
    <% if flash[:notice] %>
       <div class="alert alert-success">
