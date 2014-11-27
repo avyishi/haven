@@ -1,43 +1,26 @@
-<div>
-<a href="http://www.fandango.com/_movietimes?wss=link728x90"><img src="http://www.statf.com/r94.8/redesign/areas/staticpages/img/linktous/search/728x90/v1.gif" border="0" alt="Find Theater Showtimes" /></a>
-<script type="text/javascript" src="http://www.fandango.com/affiliatewidget_srchban_728x90.js?r=240_716140"></script>
-</div>
+<% if current_user %>
+<h1>My Movies</h1>
 
-<h1>Movies</h1>
+<%= link_to 'Add Movie', new_movie_path %>
 
 <table class="table-responsive" width = "100%">
   <thead>
     <tr>
-      <th>In Theaters</th>
-      <th>What's playing on Netflix</th>
-    </tr>
-    </thead>  
-    <tbody >
-      <tr>
-        <td>What's playing in Theaters
-        </td>
-        <td><a href www.netflix.com>Netflix Placeholder may 5 movies and then a link</a>
-        </td>
-      </tr>
-    </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>Movie Title</th>
+      <th></th>
       <th colspan="5"></th>
     </tr>
   </thead>
-
   <tbody>
-  
+    <% @movies.each do |movie| %>
       <tr>
-        
+        <td><%= movie.title %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
       </tr>
-  
+    <% end %>
   </tbody>
 </table>
-<%= simple_form_for @movie do |f| %>
-
 <% end %>
+
+
+

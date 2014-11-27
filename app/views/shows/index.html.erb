@@ -1,18 +1,25 @@
-<h1>TV Show Tracker</h1>
+<% if current_user %>
+<h1>My Shows</h1>
+
+<%= link_to 'Add TV Show', new_show_path %>
 
 <table class="table-responsive" width = "100%">
   <thead>
     <tr>
-      <th>In Theaters</th>
-      <th>What's playing on Netflix</th>
+      <th></th>
+      <th colspan="5"></th>
     </tr>
-    </thead>  
-    <tbody >
+  </thead>
+  <tbody>
+    <% @shows.each do |show| %>
       <tr>
-        <td><a href www.tvguide.com>TV Guide Placeholder</a>
-        </td>
-        <td><a href www.hulu.com>Hulu Placeholder</a>
-        </td>
+        <td><%= show.title %></td>
+        <td><%= link_to 'Edit', edit_show_path(show) %></td>
+        <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
       </tr>
-    </tbody>
+    <% end %>
+  </tbody>
 </table>
+<% end %>
+
+
