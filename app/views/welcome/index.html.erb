@@ -9,23 +9,37 @@
 </div>
 </div>
 
-
-<table class="table-responsive" width = "100%">
+<div>
+<table class="table-responsive" style= "float:left" width= "50%">
   <thead>
     <tr>
       <th>Current Movies</th>
-      <th>Current TV</th>
     </tr>
-    </thead>  
+  </thead>  
     <tbody >
-      <tr>
-        <td>Blah Blah This
-        </td>
-        <td>Blah Blah That
-        </td>
+    <% @movies.each do |movie| %>
+        <tr>
+          <td><%= link_to movie.title %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+  </div>
+
+  <div>
+  <table class= "table-responsive" width= "50%">
+  <thead>
+    <tr>
+   <th>Current TV</th>
+   </tr>
+    </thead> 
+      <tbody >
+      <% @shows.each do |show| %>
+        <tr>
+         <td><%= link_to show.title %></td>
       </tr>
+       <% end %>
     </tbody>
 </table>
-  
-
+</div>
 
