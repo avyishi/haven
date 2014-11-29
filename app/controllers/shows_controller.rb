@@ -10,7 +10,7 @@ class ShowsController < ApplicationController
   def create
     @show = current_user.shows.build(show_params)
     if @show.save
-      redirect_to @show, notice: 'Show Added'
+      redirect_to @show, notice: 'TV Show Added'
     else
       render action: 'new'
     end
@@ -27,7 +27,7 @@ class ShowsController < ApplicationController
   def update
     @show = Show.find(params[:id])
     if @show.update(show_params)
-      redirect_to @show, notice: 'Movie was successfully updated.'
+      redirect_to @show, notice: 'TV Show successfully updated.'
     else
       render action: 'edit'
     end
@@ -41,7 +41,7 @@ class ShowsController < ApplicationController
        flash[:notice] = "\"#{title}\" was deleted successfully."
        redirect_to @show
     else
-       flash[:error] = "There was an error deleting the movie."
+       flash[:error] = "There was an error deleting the TV Show."
        render :show
     end
    
