@@ -29,3 +29,15 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'paperclip'
+
+gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'figaro', '1.0'
+
+gem 'omniauth-facebook'
+
+ gem 'pundit'
+
+gem 'bh', '~> 1.2'
+
+gem 'simple_form', '~> 3.0.0.rc'

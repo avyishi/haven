@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  resources :movies
+  resources :shows
 
-
-  get 'movies/index'
-
-  devise_for :users
-  get 'about' => 'welcome#about'
+   get 'about' => 'welcome#about'
 
   root to: 'welcome#index'
 end
