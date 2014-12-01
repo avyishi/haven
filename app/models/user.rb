@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :movies, dependent: :destroy
   has_many :shows, dependent: :destroy
+  has_many   :comments
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,:validatable,#, :confirmable
