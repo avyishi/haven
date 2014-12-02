@@ -1,4 +1,4 @@
-## Haven: TV and Movie Listings
+## Haven: TV and Movie Reviews
 
 Made with my mentor at [Bloc](http://bloc.io).
 

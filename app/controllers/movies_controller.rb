@@ -1,10 +1,13 @@
 class MoviesController < ApplicationController
+  before_action :set_review, only: [:destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @movies = Movie.all
   end
 
   def new
-    @movie = Movie.new
+    @movie = current_user.movies.build
   end
 
   def create

@@ -1,10 +1,13 @@
 class ShowsController < ApplicationController
+  
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @shows = Show.all
   end
 
   def new
-    @show = Show.new
+    @show = current_user.shows.build
   end
 
   def create
@@ -48,7 +51,7 @@ class ShowsController < ApplicationController
   end
 
   def show_params
-     params.require(:show).permit(:title)
+     params.require(:show).permit(:title, :image)
   end
 
 end
