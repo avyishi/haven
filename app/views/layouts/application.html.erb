@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'your-app-id',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
   <div class="container-fluid">
     <ul class="nav nav-tabs">
     <%= nav layout: :justified do %>
@@ -18,8 +35,8 @@
 
     <div class="pull-right user-info">
       <% if current_user %>
-      <p>You're signed in as: <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-        <div><%= image_tag(current_user.image)%></div> </p>
+      <h5>You're signed in as:</h5> <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, class: 'movielink', method: :delete %>
+        <div align = "right"><%= image_tag(current_user.image)%></div> </p>
       <% else %>
       <%= link_to "Sign In", new_user_session_path %> or 
         <%= link_to "Sign Up", new_user_registration_path %>
