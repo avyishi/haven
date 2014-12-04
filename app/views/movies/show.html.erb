@@ -10,16 +10,14 @@
           <%= link_to "Review it!", new_movie_review_path(@movie), class: "btn btn-info" %>
           </div>
         </div>
-        <div class="col-md-7 col-md-offset-1">
-        <h1 class="review_title"><%= @movie.title %></h1>
 
+        <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title" align = "center"><%= @movie.title %></h1>
           <% if @reviews.blank? %>
-          <h3>No reviews just yet, would you like to add the first!</h3>
-          <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-info" %>
+          <h3 align = "center">No reviews just yet, would you like to add the first!</h3>
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
-             
               <p><%= review.comment %></p>
             </div>
           <% end %>
@@ -28,6 +26,7 @@
     </div>
   </div>
 </div>
+<br>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
