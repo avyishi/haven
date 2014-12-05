@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  resources :reviewtvs
+
   resources :movies do
     resources :reviews, except: [:index]
   end
-  resources :shows  do
-    resources :reviews, except: [:index]
+
+  resources :shows do
+    resources :reviewtvs, except: [:index]
   end
+    
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

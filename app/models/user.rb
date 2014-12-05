@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :movies
   has_many :shows
   has_many :reviews, dependent: :destroy
+  has_many :reviewstv, dependent: :destroy
   
   
   def self.from_omniauth(auth)
