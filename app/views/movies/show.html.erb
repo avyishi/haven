@@ -12,9 +12,11 @@
         </div>
 
         <div class="col-md-7 col-md-offset-1">
-        <h1 class="review_title" align = "center"><%= @movie.title %></h1>
-          <% if @reviews.blank? %>
-          <h3 align = "center">No reviews just yet, would you like to add the first!</h3>
+        <h1 class="review_title"><%= @movie.title %></h1>
+      
+        <% if @reviews.blank? %>
+          <h3 align = "center">No reviews yet, would you like to add the first!</h3>
+          <%= link_to "Review it", new_movie_review_path(@movie), class: "btn btn-info" %>
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">

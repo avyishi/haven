@@ -12,7 +12,19 @@
                 </tr>
               </tbody>
           </table>
+          <%= link_to "Review it!", new_show_reviewtv_path(@show), class: "btn btn-info" %>
         </div>
+        <div class="col-md-7 col-md-offset-1">
+        <h1 class="reviewtvs_title" align = "center"><%= @show.title %></h1>
+          <% if @reviewtvs.blank? %>
+          <h3 align = "center">No reviews just yet, would you like to add the first!</h3>
+        <% else %>
+          <% @reviewtvs.each do |reviewtv| %>
+            <div class="reviewtvs">
+              <p><%= reviewtv.comment %></p>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

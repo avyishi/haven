@@ -6,6 +6,10 @@ class ShowsController < ApplicationController
     @shows = Show.all
   end
 
+  def show
+    @reviewtvs = Reviewtv.where(show_id: @show.id).order("Created_at DESC")
+  end
+
   def new
     @show = current_user.shows.build
   end

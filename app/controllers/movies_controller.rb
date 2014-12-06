@@ -1,9 +1,15 @@
 class MoviesController < ApplicationController
-  before_action :set_review, only: [:destroy]
+  before_action :set_movie, only: [:show,:edit, :update, :destroy]
+
+  #before_action :set_review, only: [:destroy]
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
     @movies = Movie.all
+  end
+
+   def show
+    @reviews = Review.where(movie_id: @movie.id).order("Created_at DESC")
   end
 
   def new
@@ -31,7 +37,7 @@ class MoviesController < ApplicationController
       render action: 'edit'
     end
   end
-
+  
   def destroy
     @movie = Movie.find(params[:id])
     title = @movie.title
@@ -45,12 +51,14 @@ class MoviesController < ApplicationController
      end
   end
 
-  def show
-    @movie = Movie.find(params[:id])
-    @reviews = Review.where(movie_id: @movie_id).order("Created_at DESC")
-  end
+ private
+   def set_movie
+      @movie = Movie.find(params[:id])
+    end
 
-  def movie_params
+   def movie_params
      params.require(:movie).permit(:title, :image)
    end
+
+
 end
