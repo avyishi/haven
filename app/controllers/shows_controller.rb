@@ -1,5 +1,5 @@
 class ShowsController < ApplicationController
-  
+  before_action :set_show, only: [:show,:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
@@ -21,10 +21,6 @@ class ShowsController < ApplicationController
     else
       render action: 'new'
     end
-  end
-
-  def show
-    @show = Show.find(params[:id])
   end
 
   def edit
@@ -54,8 +50,14 @@ class ShowsController < ApplicationController
    
   end
 
-  def show_params
+  private
+   def set_show
+      @show = Show.find(params[:id])
+    end
+
+   def show_params
      params.require(:show).permit(:title, :image)
-  end
+   end
+  
 
 end

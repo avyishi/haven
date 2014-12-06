@@ -8,10 +8,6 @@ class ReviewtvsController < ApplicationController
     @reviewtv = Reviewtv.new
   end
 
-  def show
-    @reviewtvs = Reviewtv.where(show_id: @show_id).order("Created_at DESC")
-  end
-
   def edit
   end
 

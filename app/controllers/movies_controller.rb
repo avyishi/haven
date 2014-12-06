@@ -1,7 +1,5 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show,:edit, :update, :destroy]
-
-  #before_action :set_review, only: [:destroy]
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
@@ -59,6 +57,5 @@ class MoviesController < ApplicationController
    def movie_params
      params.require(:movie).permit(:title, :image)
    end
-
 
 end
