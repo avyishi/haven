@@ -50,14 +50,12 @@ class ShowsController < ApplicationController
    
   end
 
-  private
-   def set_show
-      @show = Show.find(params[:id])
-    end
+private
+  def set_show
+    @show = Show.find(params[:id])
+  end
 
-   def show_params
-     params.require(:show).permit(:title, :image)
-   end
-  
-
+  def show_params
+    params.require(:show).permit(:title, :image)
+  end
 end

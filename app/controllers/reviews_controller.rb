@@ -34,16 +34,16 @@ class ReviewsController < ApplicationController
     redirect_to root_path
   end
 
-  private
-    def set_review
-      @review = Review.find(params[:id])
-    end
+private
+  def set_review
+    @review = Review.find(params[:id])
+  end
 
-    def set_movie
-      @movie = Movie.find(params[:movie_id])
-    end
+  def set_movie
+    @movie = Movie.find(params[:movie_id])
+  end
 
-    def review_params
-      params.require(:review).permit(:comment)
-    end
+  def review_params
+    params.require(:review).permit(:comment)
+  end
 end
