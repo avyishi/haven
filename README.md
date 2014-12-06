@@ -2,7 +2,7 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
-Heroku link [Heroku](http://avyishihaven.herokuapp.com)
+Heroku link [Heroku](http://avyishimediahaven.herokuapp.com)
 
 == README
 
