@@ -21,7 +21,9 @@
     <tbody >
     <% @movies.each do |movie| %>
         <tr>
-          <td><%= link_to movie.title, movie %></td>
+          <td><div class="thumbnail" align = "center" width="10%">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image') , movie %>
+          <%= link_to movie.title, movie %></td>
         </tr>
         <% end %>
     </tbody>
@@ -38,7 +40,9 @@
       <tbody >
       <% @shows.each do |show| %>
         <tr>
-         <td><%= link_to show.title, show %></td>
+         <td><div class="thumbnail" align = "center">
+          <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
+          <%= link_to show.title, show %></td>
       </tr>
        <% end %>
     </tbody>
