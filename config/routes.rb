@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :shows do
+    collection do
+      get 'search'
+    end
     resources :reviewtvs, except: [:show, :index]
   end
     
