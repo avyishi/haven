@@ -14,11 +14,10 @@
       <div class="form-group">
         <% if devise_mapping.rememberable? %>
           <%= f.label :remember_me, class: 'checkbox' do %>
-
-            <%= f.check_box :remember_me, style: "float:center;" %> Remember me
+            <%= f.check_box :remember_me %> Remember me
           <% end %>
         <% end %>
-        <%= f.submit "Sign in", class: 'btn btn-info :hover'  %>
+        <%= f.submit "Sign in", class: 'btn btn-info :hover' %>
       </div>
       <div class="form-group">
         <%= render "devise/shared/links" %>
