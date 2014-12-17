@@ -11,7 +11,6 @@
 
   <div class="col-md-7 col-md-offset-1">
     <h1 class="review_title">Reviews</h1><br>
-  
     <% if @reviews.blank? %>
       <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
       <%= link_to "Review it", new_movie_review_path(@movie), class: "btn btn-info" %>
