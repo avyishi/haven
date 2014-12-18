@@ -1,6 +1,18 @@
+<div>
+  <%= form_tag search_shows_path,  method: :get, class: "navbar-form navbar-right", role: "search" do %>
+  <%= text_field_tag :search, params[:search], class: "form-control" %>
+  <%= submit_tag "Search TV Shows", name: nil, class: "btn btn-info" %>
+  <% end %>
+</div>
+<br>
+<br>
+
 <% if current_user %>
-<div align="center"><%= link_to 'Add TV Show', new_show_path %></div><br>
+<div align="center"><%= link_to 'Add TV Show', new_show_path %> 
+
+  </div><br><br>
     <% @shows.each do |show| %>
+
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail" align = "center">
           <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
@@ -10,5 +22,6 @@
       </div>
     <% end %>
 <% end %>
+
 
 

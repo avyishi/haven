@@ -71,3 +71,14 @@ label {
     font-weight: normal;
     cursor: pointer;
   }
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: middle;
+}
+
+table td, table td * {
+    vertical-align: top;
+}

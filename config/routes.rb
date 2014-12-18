@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :reviewtvs, except: [:show, :index]
+    resources :reviewtvs, except: [:index]
   end
     
      get 'about' => 'welcome#about'
