@@ -8,7 +8,7 @@ class TunesController < ApplicationController
   end
 
   def edit
-    @tune = Topic.find(params[:id])
+    @tune = Tune.find(params[:id])
   end
 
   def show
