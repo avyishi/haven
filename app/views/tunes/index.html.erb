@@ -14,3 +14,25 @@
     
 <% end %>
 
+<div class="row">
+  <div class="col-md-8">
+    <% @tunes.each do |tune| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to tune.name, tune %>
+          </h4>
+          <small>
+            <%= tune.description %>
+          </small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+    
+     
+
+  </div>
+
+

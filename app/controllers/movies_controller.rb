@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-   def show
+  def show
     @reviews = Review.where(movie_id: @movie.id).order("Created_at DESC")
   end
 

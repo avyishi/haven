@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :movies
   has_many :shows
+  has_many :tunes
   has_many :reviews, dependent: :destroy
   has_many :reviewtvs, dependent: :destroy
   
