@@ -1,6 +1,6 @@
 class TunesController < ApplicationController
   def index
-     @tunes = Tune.all
+    @tunes = Tune.all
   end
 
   def new
@@ -18,7 +18,7 @@ class TunesController < ApplicationController
   def create
     @tune = current_user.tunes.build(tune_params)
     if @movie.save
-      redirect_to @tune, notice: 'Music Added!'
+      redirect_to @tune, notice: 'New Music Added!'
     else
       render action: 'new'
     end
