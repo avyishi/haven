@@ -17,12 +17,12 @@ class TunesController < ApplicationController
 
   def create
     @tune = current_user.tunes.build(tune_params)
-    if @movie.save
+    if @tune.save
       redirect_to @tune, notice: 'New Music Added!'
     else
       render action: 'new'
     end
-  end
+  
 
   def update
     @tune = Tune.find(params[:id])
@@ -33,3 +33,15 @@ class TunesController < ApplicationController
     end
   end
 end
+
+private
+   def set_tunes
+      @tune = Tune.find(params[:id])
+    end
+
+   def tune_params
+     params.require(:tune).permit(:title, :image)
+   end
+
+end
+
