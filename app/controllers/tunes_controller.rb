@@ -23,7 +23,6 @@ class TunesController < ApplicationController
       render action: 'new'
     end
   
-
   def update
     @tune = Tune.find(params[:id])
     if @tune.update(tune_params)
@@ -35,13 +34,12 @@ class TunesController < ApplicationController
 end
 
 private
-   def set_tunes
-      @tune = Tune.find(params[:id])
-    end
+  def set_tunes
+    @tune = Tune.find(params[:id])
+  end
 
-   def tune_params
-     params.require(:tune).permit(:title, :image)
-   end
-
+  def tune_params
+    params.require(:tune).permit(:title, :image)
+  end
 end
 
