@@ -42,13 +42,12 @@ class TunesController < ApplicationController
 
     if @tune.destroy
        flash[:notice] = "\"#{title}\" was deleted successfully."
-       redirect_to @movie
+       redirect_to @tune
      else
        flash[:error] = "There was an error deleting the movie."
        render :show
      end
   end
-
 
 private
   def set_tune
