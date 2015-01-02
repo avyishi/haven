@@ -1,10 +1,13 @@
 class TunesController < ApplicationController
+  before_action :set_tune, only: [:show,:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @tunes = Tune.all
   end
 
   def new
-    @tune = Tune.new
+    @tune = current_user.tunes.build
   end
 
   def edit
@@ -22,19 +25,33 @@ class TunesController < ApplicationController
     else
       render action: 'new'
     end
+  end
   
   def update
     @tune = Tune.find(params[:id])
     if @tune.update(tune_params)
-      redirect_to @movie, notice: 'Movie successfully updated.'
+      redirect_to @tune, notice: 'Music successfully updated.'
     else
-      render action: 'new'
+      render action: 'edit'
     end
   end
-end
+
+  def destroy
+    @tune = Tune.find(params[:id])
+    title = @tune.title
+
+    if @tune.destroy
+       flash[:notice] = "\"#{title}\" was deleted successfully."
+       redirect_to @movie
+     else
+       flash[:error] = "There was an error deleting the movie."
+       render :show
+     end
+  end
+
 
 private
-  def set_tunes
+  def set_tune
     @tune = Tune.find(params[:id])
   end
 
@@ -42,4 +59,5 @@ private
     params.require(:tune).permit(:title, :image)
   end
 end
+
 
