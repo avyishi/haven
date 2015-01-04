@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-    @movies = Movie.order('Created_at desc')
-    @shows = Show.order('Created_at desc')
-    @tunes = Tune.order('Created_at desc')
+    @movies = Movie.order('Created_at asc')
+    @shows = Show.order('Created_at asc')
+    @tunes = Tune.order('Created_at asc')
   end
 
   def about
