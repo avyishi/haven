@@ -58,3 +58,24 @@
 </table>
 </div>
 
+<div>
+  <table class= "table-responsive" style= "float:right" width= "50%">
+  <thead>
+    <tr>
+   <th><span style="color: #ffffff;" > </th></span>
+   </tr>
+    </thead> 
+      <tbody >
+      <% @tunes.each do |tune| %>
+        <tr>
+         <td rowspan="1">
+           <div class="col-sm-2 col-sm-3">
+           <div class="thumbnail" align = "center" width="10%">
+            <%= link_to (image_tag tune.image.url(:medium), class: 'image') , tune %>
+            <%= link_to tune.title, tune %>
+          </td>
+        </tr>
+       <% end %>
+    </tbody>
+</table>
+
