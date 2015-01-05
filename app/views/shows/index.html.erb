@@ -12,7 +12,6 @@
 
   </div><br><br>
     <% @shows.each do |show| %>
-
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail" align = "center">
           <%= link_to (image_tag show.image.url(:medium), class: 'image') , show %>
