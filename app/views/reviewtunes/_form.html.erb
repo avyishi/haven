@@ -1,4 +1,4 @@
-<%= simple_form_for([@tune, @reviewtune]) do |f| %>
+<%= form_for(@reviewtune) do |f| %>
   <% if @reviewtune.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@reviewtune.errors.count, "error") %> prohibited this reviewtune from being saved:</h2>
@@ -16,8 +16,6 @@
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit", class: 'btn btn-info' %>
+    <%= f.submit %>
   </div>
 <% end %>
-
- 
