@@ -1,17 +1,9 @@
 class ReviewtunesController < ApplicationController
   before_action :set_reviewtune, only: [:show, :edit, :update, :destroy]
+  before_action :set_tune
   before_action :authenticate_user!
   
   respond_to :html
-
-  def index
-    @reviewtunes = Reviewtune.all
-    respond_with(@reviewtunes)
-  end
-
-  def show
-    respond_with(@reviewtune)
-  end
 
   def new
     @reviewtune = Reviewtune.new
@@ -24,8 +16,12 @@ class ReviewtunesController < ApplicationController
   def create
     @reviewtune = Reviewtune.new(reviewtune_params)
     @reviewtune.user_id = current_user.id
-    @reviewtune.save
-    respond_with(@reviewtune)
+    @reviewtune.tune_id = @tune.id
+    if @reviewtune.save
+      redirect_to @tune
+    else
+      render 'new'
+    end  
   end
 
   def update
@@ -41,6 +37,10 @@ class ReviewtunesController < ApplicationController
   private
     def set_reviewtune
       @reviewtune = Reviewtune.find(params[:id])
+    end
+
+    def set_tune
+      @tune = Tune.find(params[:tune_id])
     end
 
     def reviewtune_params

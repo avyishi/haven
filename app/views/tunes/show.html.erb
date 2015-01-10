@@ -5,7 +5,26 @@
   <div class="col-md-4">
     <%= image_tag @tune.image.url(:medium) %>
     <br><br>
+    <div class="table-responsive">
+      <%= link_to "Review it!", new_tune_reviewtune_path(@tune), class: "btn btn-info" %>
+    </div>
   </div>
+
+  <div class="col-md-7 col-md-offset-1">
+    <h1 class="reviewtune_title">Reviews</h1><br>
+    
+    <% if @reviewtunes.blank? %>
+      <h3 align = "center">No reviews yet, go ahead and become the first!</h3>
+      <%= link_to "Review it!", new_tune_reviewtune_path(@tune), class: "btn btn-info" %>
+      <% else %>
+        <% @reviewtunes.each do |reviewtune| %>
+          <div class="reviewtunes">
+            <p align="center"><%= reviewtune.comment %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_tune_path(@tune) %> |
 <%= link_to 'Back', tunes_path %>

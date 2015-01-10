@@ -15,9 +15,8 @@ class TunesController < ApplicationController
   end
 
   def show
-    @tune = Tune.find(params[:id])
+    @reviewtunes = Reviewtune.where(tune_id: @tune.id).order("Created_at DESC")
   end
-
   def create
     @tune = current_user.tunes.build(tune_params)
     if @tune.save

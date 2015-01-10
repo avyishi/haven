@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  resources :reviewtunes
-
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :movies do
@@ -19,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :tunes do
-    resources :reviewtunes, except: [:index]
+    resources :reviewtunes, except: [:show, :index]
   end
     
      get 'about' => 'welcome#about'
