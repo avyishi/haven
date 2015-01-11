@@ -17,6 +17,7 @@ class TunesController < ApplicationController
   def show
     @reviewtunes = Reviewtune.where(tune_id: @tune.id).order("Created_at DESC")
   end
+
   def create
     @tune = current_user.tunes.build(tune_params)
     if @tune.save
@@ -40,12 +41,12 @@ class TunesController < ApplicationController
     title = @tune.title
 
     if @tune.destroy
-       flash[:notice] = "\"#{title}\" was deleted successfully."
-       redirect_to @tune
-     else
-       flash[:error] = "There was an error deleting the movie."
-       render :show
-     end
+      flash[:notice] = "\"#{title}\" was deleted successfully."
+      redirect_to @tune
+    else
+      flash[:error] = "There was an error deleting the movie."
+      render :show
+    end
   end
 
 private
