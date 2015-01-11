@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   end
 
   resources :tunes do
+    collection do
+      get 'search'
+    end
     resources :reviewtunes, except: [:show, :index]
   end
     
