@@ -42,7 +42,7 @@
       <%= link_to "Sign out", destroy_user_session_path, class: 'movielink', method: :delete %>
         <div align = "center"><%= image_tag(current_user.image)%></div> <br>
       <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or 
+      <%= link_to "Sign In", new_user_session_path %> <em>or</em> 
       <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
         </div>
