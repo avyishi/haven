@@ -4,10 +4,10 @@ Heroku link [Heroku](http://avyishimediahaven.herokuapp.com)
 
 My Movie and TV Show review app!!
 
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790404/5d59b0c8-9e4b-11e4-84b4-b24f7b17f6b2.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790406/5d5e8792-9e4b-11e4-871c-c765844fc158.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790409/5d5f0528-9e4b-11e4-86c4-e3e879396b6e.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790405/5d5b055e-9e4b-11e4-85b4-e49063089300.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790408/5d5f0b7c-9e4b-11e4-8f1a-a82e67922869.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790407/5d5ebabe-9e4b-11e4-9917-b214b15049a6.png)
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790410/5d6b0b16-9e4b-11e4-90f1-b67485db0947.png)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790441/6d62aafe-9e4d-11e4-82ce-fa2b3dd32ea0.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790442/6d647104-9e4d-11e4-9fe0-3516296f5b80.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790446/6d685d8c-9e4d-11e4-9fc3-77fc38dcbecc.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790443/6d64a71e-9e4d-11e4-8284-01e91e57396c.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790444/6d64faca-9e4d-11e4-91d9-09849edb97ac.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790445/6d655204-9e4d-11e4-9c03-a1810efd6ec4.jpg)
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790447/6d739bac-9e4d-11e4-8405-1de195c071c2.jpg)
