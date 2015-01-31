@@ -1,4 +1,4 @@
-## Media Haven: TV and Movie Reviews
+## Media Haven: Add TV Shows, Movies & Music!
 
 Heroku link [Heroku](http://avyishimediahaven.herokuapp.com)
 
