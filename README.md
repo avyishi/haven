@@ -1,6 +1,6 @@
 ## Media Haven: Add TV Shows, Movies & Music!
 
-Heroku link [Heroku](http://avyishimediahaven.herokuapp.com)
+Heroku link [Heroku](http://avyishihaven.herokuapp.com)
 
 My Movie and TV Show review app!!
 
