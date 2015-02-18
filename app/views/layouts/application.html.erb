@@ -8,6 +8,7 @@
   </head>
 
   <body>
+   
     <script>
         window.fbAsyncInit = function() {
           FB.init({
@@ -25,9 +26,9 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-
+       <div id="wrapper">
     <div class="container-fluid">
-      <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs">
           <%= nav layout: :justified do %>
           <%= link_to 'Home', root_path %>
           <%= link_to "TV Shows", shows_path %>
@@ -73,6 +74,7 @@
           Copyright &copy; 2015 CBS VI 360
         </em>
       </div>
+    </div>
     </div>
   </body>
 </html>
