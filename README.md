@@ -1,10 +1,9 @@
-## Media Haven: Add TV Shows, Movies & Music!
+## Haven: Add TV Shows, Movies, Music & Review Them!
 
 Heroku link [Heroku](http://avyishihaven.herokuapp.com)
 
-My Movie and TV Show review app!!
 
-![alt tag](https://cloud.githubusercontent.com/assets/6601494/5986990/1cc6fbb4-a8c9-11e4-8397-4095040983e7.jpg) 
+![alt tag](https://cloud.githubusercontent.com/assets/6601494/5986990/1cc6fbb4-a8c9-11e4-8397-4095040983e7.jpg)
 ![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790442/6d647104-9e4d-11e4-9fe0-3516296f5b80.jpg)
 ![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790446/6d685d8c-9e4d-11e4-9fc3-77fc38dcbecc.jpg)
 ![alt tag](https://cloud.githubusercontent.com/assets/6601494/5790443/6d64a71e-9e4d-11e4-8284-01e91e57396c.jpg)
